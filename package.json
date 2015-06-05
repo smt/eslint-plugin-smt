@@ -1,7 +1,7 @@
 {
   "name": "eslint-plugin-smt",
   "version": "0.0.0",
-  "description": "",
+  "description": "A test eslint plugin",
   "main": "index.js",
   "directories": {
     "test": "tests"
@@ -9,8 +9,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Stephen Tudor <STudor@anthropologie.com>",
+  "license": "MIT",
+  "keywords": [
+    "eslint",
+    "eslintplugin"
+  ],
   "peerDependencies": {
     "eslint": ">=0.8.0"
   }
