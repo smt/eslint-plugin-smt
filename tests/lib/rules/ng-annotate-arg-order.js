@@ -17,7 +17,7 @@ var ESLintTester = require('eslint-tester');
 // ----------------------------------------------------------------------------
 
 var eslintTester = new ESLintTester(eslint);
-eslintTester.addRuleTest('lib/rules/output-ast', {
+eslintTester.addRuleTest('lib/rules/ng-annotate-arg-order', {
     valid: [
         { code: 'function () {}' },
         { code: 'module.exports = /*@ngInject*/ function (a,b,c) {}' },
