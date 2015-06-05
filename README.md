@@ -1,5 +1,13 @@
 # eslint-plugin-smt
 
+Remember to install the dependencies after cloning:
+
+```shell
+$ git clone https://github.com/smt/eslint-plugin-smt.git
+$ cd eslint-plugin-smt
+$ npm install
+```
+
 To test a rule in isolation, run a command similar to:
 
 ```shell
