@@ -7,9 +7,9 @@
 
 module.exports = {
     rules: {
-        'output-ast': require('./lib/rules/outputAst')
+        'ng-annotate-arg-order': require('./lib/rules/ng-annotate-arg-order')
     },
     rulesConfig: {
-        'output-ast': 1
+        'ng-annotate-arg-order': 1
     }
 };
