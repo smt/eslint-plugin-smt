@@ -19,13 +19,29 @@ var ESLintTester = require('eslint-tester');
 var eslintTester = new ESLintTester(eslint);
 eslintTester.addRuleTest('lib/rules/ng-annotate-arg-order', {
     valid: [
-        { code: 'function () {}' },
-        { code: 'module.exports = /*@ngInject*/ function (a,b,c) {}' },
-        { code: 'module.exports = /*@ngInject*/ function (1,B,a) {}' }
+        'module.exports = function (a,b,c) {}',
+        'module.exports = function (c,b,a) {}',
+        'module.exports = /*@ngInject*/ function (a,b,c) {}',
+        'module.exports = /*@ngInject*/ function (1,B,a) {}'
     ],
     invalid: [
-        { code: 'module.exports = /*@ngInject*/ function (b,a,c) {}' },
-        { code: 'module.exports = /*@ngInject*/ function (a,B,c) {}' },
-        { code: 'module.exports = /*@ngInject*/ function (a,b,1) {}' }
+        {
+            code: 'module.exports = /*@ngInject*/ function (b,a,c) {}',
+            errors: [
+                { message: 'Found argument identifier out of alphabetical order' }
+            ]
+        },
+        {
+            code: 'module.exports = /*@ngInject*/ function (a,B,c) {}',
+            errors: [
+                { message: 'Found argument identifier out of alphabetical order' }
+            ]
+        },
+        {
+            code: 'module.exports = /*@ngInject*/ function (a,b,1) {}',
+            errors: [
+                { message: 'Found argument identifier out of alphabetical order' }
+            ]
+        }
     ]
 })
