@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = /*@ngInject*/
-function exports (
+function exampleOneController (
     a,
     b,
     c
