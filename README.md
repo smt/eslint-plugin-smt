@@ -16,5 +16,3 @@ $ ./node_modules/eslint/bin/eslint.js --reset --no-eslintrc \
   --rulesdir ./lib/rules \
   tests/*.js
 ```
-
-Then, edit [example1.js](https://github.com/smt/eslint-plugin-smt/blob/master/tests/example1.js) to make it fail the rule.
